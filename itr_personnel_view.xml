@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="itr_personnel_form_view" model="ir.ui.view">
+            <field name="name">itr.personnel.form</field>
+            <field name="model">itr.personnel</field>
+            <field name="arch" type="xml">
+                <form string="Personnel" version="7.0">
+                    <sheet>
+                        <notebook >
+                            <page string="Personnel">
+                                <group>
+                                    <field name="matricule" />
+                                    <field name="nom"/>
+                                    <field name="prenom"/>
+                                    <field name="fonction"/>
+                                    <field name="tel"/>
+                                    <field name="fax"/>
+                                    <field name="email"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="itr.personnel_tree">
+            <field name="name">itr.personnel.tree</field>
+            <field name="model">itr.personnel</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Personnel">
+                    <field name="matricule" />
+                    <field name="nom"/>
+                    <field name="prenom"/>
+                    <field name="fonction"/>
+                    <field name="tel"/>
+                    <field name="fax"/>
+                    <field name="email"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_personnel_seq">
+            <field name="name">action personnel</field>
+            <field name="res_model">itr.personnel</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</openerp>

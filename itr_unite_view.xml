@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="itr_unite_form_view" model="ir.ui.view">
+            <field name="name">itr.unite.form</field>
+            <field name="model">itr.unite</field>
+            <field name="arch" type="xml">
+                <form string="Unite" version="7.0">
+                    <sheet>
+                        <notebook >
+                            <page string="Unite">
+                                <group>
+                                    <field name="code" />
+                                    <field name="designation" />
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="itr.unite_tree">
+            <field name="name">itr.unite.tree</field>
+            <field name="model">itr.unite</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Unite">
+                    <field name="code" />
+                    <field name="designation" />
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_unite_seq">
+            <field name="name">action unite</field>
+            <field name="res_model">itr.unite</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</openerp>

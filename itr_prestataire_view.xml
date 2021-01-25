@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="itr_prestataire_form_view" model="ir.ui.view">
+            <field name="name">itr.prestataire.form</field>
+            <field name="model">itr.prestataire</field>
+            <field name="arch" type="xml">
+                <form string="Prestataire" version="7.0">
+                    <sheet>
+                        <notebook >
+                            <page string="Prestataire">
+                                <group>
+                                    <field name="prestataire" />
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="itr.prestataire_tree">
+            <field name="name">itr.prestataire.tree</field>
+            <field name="model">itr.prestataire</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Prestataire">
+                    <field name="prestataire" />
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_prestataire_seq">
+            <field name="name">action prestataire</field>
+            <field name="res_model">itr.prestataire</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="itr_prestation_form_view" model="ir.ui.view">
+            <field name="name">itr.prestation.form</field>
+            <field name="model">itr.prestation</field>
+            <field name="arch" type="xml">
+                <form string="Prestation" version="7.0">
+                    <sheet>
+                        <notebook >
+                            <page string="Prestation">
+                                <group>
+                                    <field name="vol_horaire" />
+                                    <field name="cout" />
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="itr.prestation_tree">
+            <field name="name">itr.prestation.tree</field>
+            <field name="model">itr.prestation</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Prestation">
+                    <field name="vol_horaire" />
+                    <field name="cout" />
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_prestation_seq">
+            <field name="name">action prestation</field>
+            <field name="res_model">itr.prestation</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</openerp>

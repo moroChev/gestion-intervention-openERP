@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="itr_patrimoine_actif_form_view" model="ir.ui.view">
+            <field name="name">itr.patrimoine_actif.form</field>
+            <field name="model">itr.patrimoine_actif</field>
+            <field name="arch" type="xml">
+                <form string="Patrimoine Actif" version="7.0">
+                    <sheet>
+                        <notebook >
+                            <page string="Patrimoine Actif">
+                                <group>
+                                    <field name="code" />
+                                    <field name="designation"/>
+                                    <field name="valeur_acquisition"/>
+                                    <field name="date_acquisition"/>
+                                    <field name="date_mise_service"/>
+                                    <field name="etat_actuelle"/>
+                                    <field name="n_bc"/>
+                                    <field name="n_bl"/>
+                                    <field name="n_facture"/>
+                                    <field name="image_actif"/>
+                                    <field name="consigne_securite"/>
+                                    <field name="degre_importance"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="itr.patrimoine_actif_tree">
+            <field name="name">itr.patrimoine_actif.tree</field>
+            <field name="model">itr.patrimoine_actif</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Infos Actif">
+                    <field name="code" />
+                    <field name="designation"/>
+                    <field name="valeur_acquisition"/>
+                    <field name="date_acquisition"/>
+                    <field name="date_mise_service"/>
+                    <field name="etat_actuelle"/>
+                    <field name="n_bc"/>
+                    <field name="n_bl"/>
+                    <field name="n_facture"/>
+                    <field name="image_actif"/>
+                    <field name="consigne_securite"/>
+                    <field name="degre_importance"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_patrimoine_actif_seq">
+            <field name="name">action patrimoine actif</field>
+            <field name="res_model">itr.patrimoine_actif</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</openerp>

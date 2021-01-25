@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="itr_bon_commande_form_view" model="ir.ui.view">
+            <field name="name">itr.bon_commande.form</field>
+            <field name="model">itr.bon_commande</field>
+            <field name="arch" type="xml">
+                <form string="Bon commande" version="7.0">
+                    <sheet>
+                        <notebook >
+                            <page string="Bon Commande">
+                                <group>
+                                    <field name="code_bc" />
+                                    <field name="date_bc"/>
+                                    <field name="montant_bc_ht"/>
+                                    <field name="montant_bc_ttc"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="itr.bon_commande_tree">
+            <field name="name">itr.bon_commande.tree</field>
+            <field name="model">itr.bon_commande</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Infos departement">
+                    <field name="code_bc"/>
+                    <field name="date_bc"/>
+                    <field name="montant_bc_ht"/>
+                    <field name="montant_bc_ttc"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_bon_commande_seq">
+            <field name="name">action bon commande</field>
+            <field name="res_model">itr.bon_commande</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</openerp>

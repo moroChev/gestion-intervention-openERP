@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="itr_fournisseur_form_view" model="ir.ui.view">
+            <field name="name">itr.fournisseur.form</field>
+            <field name="model">itr.fournisseur</field>
+            <field name="arch" type="xml">
+                <form string="Fournisseur" version="7.0">
+                    <sheet>
+                        <notebook >
+                            <page string="Fournisseur">
+                                <group>
+                                    <field name="code" />
+                                    <field name="denomination"/>
+                                    <field name="adresse"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="itr.fournisseur_tree">
+            <field name="name">itr.fournisseur.tree</field>
+            <field name="model">itr.fournisseur</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Infos Fournisseur">
+                    <field name="code"/>
+                    <field name="denomination"/>
+                    <field name="adresse"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_fournisseur_seq">
+            <field name="name">action fournisseur</field>
+            <field name="res_model">itr.denomination</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</openerp>

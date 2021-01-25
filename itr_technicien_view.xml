@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="itr_technicien_form_view" model="ir.ui.view">
+            <field name="name">itr.technicien.form</field>
+            <field name="model">itr.technicien</field>
+            <field name="arch" type="xml">
+                <form string="Technicien" version="7.0">
+                    <sheet>
+                        <notebook >
+                            <page string="Technicien">
+                                <group>
+                                    <field name="nom" />
+                                    <field name="taux_horaire"/>
+                                    <field name="vol_horaire"/>
+                                    <field name="cout"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="itr.technicien_tree">
+            <field name="name">itr.technicien.tree</field>
+            <field name="model">itr.technicien</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Infos Technicien">
+                    <field name="nom" />
+                    <field name="taux_horaire"/>
+                    <field name="vol_horaire"/>
+                    <field name="cout"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_technicien_seq">
+            <field name="name">action technicien</field>
+            <field name="res_model">itr.technicien</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</openerp>

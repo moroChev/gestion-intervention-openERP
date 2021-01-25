@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="itr_patrimoine_geographique_form_view" model="ir.ui.view">
+            <field name="name">itr.patrimoine_geographique.form</field>
+            <field name="model">itr.patrimoine_geographique</field>
+            <field name="arch" type="xml">
+                <form string="Patrimoine Actif" version="7.0">
+                    <sheet>
+                        <notebook >
+                            <page string="Patrimoine Geographique">
+                                <group>
+                                    <field name="code" />
+                                    <field name="designation"/>
+                                    <field name="croquis"/>
+                                    <field name="fiche_immeuble"/>
+                                    <field name="fiche_etage"/>
+                                    <field name="fiche_local"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="itr.patrimoine_geographique_tree">
+            <field name="name">itr.patrimoine_geographique.tree</field>
+            <field name="model">itr.patrimoine_geographique</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Patrimoine Geographique">
+                    <field name="code" />
+                    <field name="designation"/>
+                    <field name="croquis"/>
+                    <field name="fiche_immeuble"/>
+                    <field name="fiche_etage"/>
+                    <field name="fiche_local"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_patrimoine_geographique_seq">
+            <field name="name">action patrimoine geographique</field>
+            <field name="res_model">itr.patrimoine_geographique</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</openerp>

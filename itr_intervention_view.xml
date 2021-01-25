@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="itr_intervention_form_view" model="ir.ui.view">
+            <field name="name">itr.intervention.form</field>
+            <field name="model">itr.intervention</field>
+            <field name="arch" type="xml">
+                <form string="Intervention" version="7.0">
+                    <sheet>
+                        <notebook >
+                            <page string="Intervention">
+                                <group>
+                                    <field name="code_intervention" />
+                                    <field name="date_demande" />
+                                    <field name="libelle_intervention" />
+                                    <field name="probleme" />
+                                    <field name="diagnostic" />
+                                    <field name="solution" />
+                                    <field name="observation" />
+                                    <field name="date_acceptee" />
+                                    <field name="date_annulee" />
+                                    <field name="date_diagnostic" />
+                                    <field name="date_preparation" />
+                                    <field name="date_encours" />
+                                    <field name="date_execute" />
+                                    <field name="cout_pdt" />
+                                    <field name="cout_interne" />
+                                    <field name="cout_prestation" />
+                                    <field name="cout_global" />
+                                    <field name="n_ordre_priorite" />
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="itr.intervention_tree">
+            <field name="name">itr.intervention.tree</field>
+            <field name="model">itr.intervention</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Intervention">
+                    <field name="code_intervention" />
+                    <field name="date_demande" />
+                    <field name="libelle_intervention" />
+                    <field name="probleme" />
+                    <field name="diagnostic" />
+                    <field name="solution" />
+                    <field name="observation" />
+                    <field name="date_acceptee" />
+                    <field name="date_annulee" />
+                    <field name="date_diagnostic" />
+                    <field name="date_preparation" />
+                    <field name="date_encours" />
+                    <field name="date_execute" />
+                    <field name="cout_pdt" />
+                    <field name="cout_interne" />
+                    <field name="cout_prestation" />
+                    <field name="cout_global" />
+                    <field name="n_ordre_priorite" />
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_intervention_seq">
+            <field name="name">action intervention</field>
+            <field name="res_model">itr.intervention</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</openerp>

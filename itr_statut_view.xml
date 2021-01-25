@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="itr_statut_form_view" model="ir.ui.view">
+            <field name="name">itr.statut.form</field>
+            <field name="model">itr.statut</field>
+            <field name="arch" type="xml">
+                <form string="Statut" version="7.0">
+                    <sheet>
+                        <notebook >
+                            <page string="Statut">
+                                <group>
+                                    <field name="statut" />
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="itr.statut_tree">
+            <field name="name">itr.statut.tree</field>
+            <field name="model">itr.statut</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Statut">
+                    <field name="statut" />
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_statut_seq">
+            <field name="name">action statut</field>
+            <field name="res_model">itr.statut</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</openerp>

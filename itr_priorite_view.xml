@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="itr_priorite_form_view" model="ir.ui.view">
+            <field name="name">itr.priorite.form</field>
+            <field name="model">itr.priorite</field>
+            <field name="arch" type="xml">
+                <form string="Priorite" version="7.0">
+                    <sheet>
+                        <notebook >
+                            <page string="Priorite">
+                                <group>
+                                    <field name="priorite" />
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="itr.priorite_tree">
+            <field name="name">itr.priorite.tree</field>
+            <field name="model">itr.priorite</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Priorite">
+                    <field name="priorite" />
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_priorite_seq">
+            <field name="name">action priorite</field>
+            <field name="res_model">itr.priorite</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</openerp>
